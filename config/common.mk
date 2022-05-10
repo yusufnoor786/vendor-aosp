@@ -217,4 +217,7 @@ $(call inherit-product, vendor/aosp/config/ota.mk)
 # RRO Overlays
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
+# Pixel Launcher
+$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
