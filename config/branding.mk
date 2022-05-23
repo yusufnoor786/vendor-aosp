@@ -1,4 +1,16 @@
 CUSTOM_BUILD_TYPE ?= UNOFFICIAL
+# OFFICIAL_DEVICES
+ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
+  LIST = $(shell cat vendor/aosp/altho.devices)
+    ifeq ($(filter $(CUSTOM_BUILD), $(LIST)), $(CUSTOM_BUILD))
+      IS_OFFICIAL=true
+      CUSTOM_BUILD_TYPE := OFFICIAL
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+      CUSTOM_BUILD_TYPE := UNOFFICIAL
+      $(error Device is not official "$(CUSTOM_BUILD)")
+    endif
+endif
 
 # Altho Props
 Altho_BASE_VERSION = 1.0
