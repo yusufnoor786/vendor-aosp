@@ -13,8 +13,8 @@ ifeq ($(CUSTOM_BUILD_TYPE), OFFICIAL)
 endif
 
 # Altho Props
-Altho_BASE_VERSION = 1.0
-Altho_CODENAME := Comet
+Altho_BASE_VERSION = 1.1
+Altho_CODENAME := Thunder_Cloud
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
