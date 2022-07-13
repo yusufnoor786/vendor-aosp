@@ -18,6 +18,9 @@ ADDITIONAL_SYSTEM_PROPERTIES  += \
     persist.sys.recovery_update=true
 endif
 
+# Version
+ALTHO_PLATFORM_RELEASE_OR_CODENAME := 12L
+
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
     org.altho.version=$(Altho_BASE_VERSION) \
@@ -26,4 +29,5 @@ ADDITIONAL_SYSTEM_PROPERTIES  += \
     org.altho.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
     org.altho.build_type=$(CUSTOM_BUILD_TYPE) \
     org.altho.codename=$(Altho_CODENAME) \
-    ro.altho.maintainer=$(Altho_MAINTAINER)
+    ro.altho.maintainer=$(Altho_MAINTAINER)\
+    ro.altho.settings.android_version=$(ALTHO_PLATFORM_RELEASE_OR_CODENAME)
