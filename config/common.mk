@@ -95,6 +95,8 @@ PRODUCT_PACKAGES += \
     mke2fs \
     mkfs.ntfs \
     mount.ntfs
+# Inherit from fonts
+$(call inherit-product, vendor/stormbreaker/fonts/fonts.mk)
 
 # Config
 PRODUCT_PACKAGES += \
