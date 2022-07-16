@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/stormbreaker/fonts
+LOCAL_PATH := vendor/aosp/fonts/fonts
 
 # Copy font files
-include vendor/stormbreaker/fonts/font_files.mk
+include vendor/aosp/fonts/font_files.mk
 
 # Register custom fonts
 PRODUCT_COPY_FILES += \
