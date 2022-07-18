@@ -229,6 +229,10 @@ $(call inherit-product, vendor/aosp/config/audio.mk)
 # Bootanimation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+   ThemePicker
+
 # Fonts
 #$(call inherit-product, vendor/aosp/config/fonts.mk)
 
