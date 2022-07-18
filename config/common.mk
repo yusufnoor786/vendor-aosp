@@ -123,6 +123,11 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
      GameSpace
 
+# Gapps
+ifeq ($(WITH_GAPPS),true)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 # One Handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true \
