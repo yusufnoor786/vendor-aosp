@@ -143,8 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI \
-    NexusLauncherRelease
+    SystemUI
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
@@ -195,6 +194,9 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_actions_suggestions_universal_model \
 	libtextclassifier_lang_id_model
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
@@ -229,9 +231,6 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
 # Fonts
 $(call inherit-product, vendor/aosp/config/fonts.mk)
-
-# GApps
-$(call inherit-product, vendor/gapps/config.mk)
 
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
