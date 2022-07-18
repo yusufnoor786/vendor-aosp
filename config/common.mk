@@ -132,6 +132,11 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true \
 
+# Lawnchair
+ifneq ($(WITH_GAPPS), true)
+include vendor/lawnchair/lawnchair.mk
+endif
+
 # NavigationBarMode
 PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay
