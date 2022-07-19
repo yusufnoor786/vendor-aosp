@@ -131,9 +131,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true \
 
 # Lawnchair
-ifneq ($(WITH_GAPPS), true)
 include vendor/lawnchair/lawnchair.mk
-endif
 
 # NavigationBarMode
 PRODUCT_PACKAGES += \
@@ -241,6 +239,8 @@ $(call inherit-product, vendor/aosp/config/ota.mk)
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
 # Pixel Launcher
+ifeq ($(WITH_PIXEL_LAUNCHER),true)
 $(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
