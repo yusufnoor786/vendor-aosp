@@ -190,9 +190,6 @@ PRODUCT_PACKAGES += \
 	libtextclassifier_actions_suggestions_universal_model \
 	libtextclassifier_lang_id_model
 
-# ThemeOverlays
-include packages/overlays/Themes/themes.mk
-
 # Use gestures by default
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
@@ -227,7 +224,8 @@ $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-   ThemePicker
+   ThemePicker \
+   RepainterServicePriv
 
 # Fonts
 #$(call inherit-product, vendor/aosp/config/fonts.mk)
