@@ -124,9 +124,7 @@ PRODUCT_PACKAGES += \
      GameSpace
 
 # Gapps
-ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
-endif
+$(call inherit-product, vendor/gapps/config.mk)
 
 # One Handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
