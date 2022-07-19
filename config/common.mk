@@ -241,4 +241,7 @@ ifeq ($(WITH_PIXEL_LAUNCHER),true)
 $(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
 endif
 
+# Themed icons
+$(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
