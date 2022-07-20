@@ -223,9 +223,9 @@ $(call inherit-product, vendor/aosp/config/audio.mk)
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
 # ThemePicker
-PRODUCT_PACKAGES += \
-   ThemePicker \
-   RepainterServicePriv
+#PRODUCT_PACKAGES += \
+#   ThemePicker \
+#   RepainterServicePriv
 
 # Fonts
 #$(call inherit-product, vendor/aosp/config/fonts.mk)
@@ -237,8 +237,8 @@ $(call inherit-product, vendor/aosp/config/ota.mk)
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 
 # Pixel Launcher
-ifeq ($(WITH_PIXEL_LAUNCHER),true)
-$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
-endif
+#ifeq ($(WITH_PIXEL_LAUNCHER),true)
+#$(call inherit-product, vendor/PixelLauncher/PixelLauncher.mk)
+#endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
